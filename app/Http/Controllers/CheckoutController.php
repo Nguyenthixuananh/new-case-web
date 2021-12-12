@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class CheckoutController extends Controller
 {
@@ -40,13 +41,21 @@ class CheckoutController extends Controller
     }
     public function add_customer(Request $request){
 
-        $data = array();
-        $data['customer_name'] = $request->customer_name;
-        $data['customer_phone'] = $request->customer_phone;
-        $data['customer_email'] = $request->customer_email;
-        $data['customer_password'] = md5($request->customer_password);
+        $validator = Validator::make($request->all(), [
+            'customer_name'=>'bail|required|alpha|min:6|max:10',
+            'customer_phone'=>'bail|required|alpha|min:6|max:10',
+            'customer_email'=>'bail|required|email',
+            'customer_password'=>'bail|required|min:5',
+        ]);
 
-        $customer_id = DB::table('tbl_customers')->insertGetId($data);
+//        $data = array();
+//        $data['customer_name'] = $request->customer_name;
+//        $data['customer_phone'] = $request->customer_phone;
+//        $data['customer_email'] = $request->customer_email;
+//        $data['customer_password'] = md5($request->customer_password);
+
+//        $customer_id = DB::table('tbl_customers')->insertGetId($data);
+        $customer_id = DB::table('tbl_customers')->insertGetId($validator);
 
         Session::put('customer_id',$customer_id);
         Session::put('customer_name',$request->customer_name);
