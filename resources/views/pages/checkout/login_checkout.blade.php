@@ -9,7 +9,7 @@
                         <h2>Đăng nhập tài khoản</h2>
                         <form action="{{URL::to('/login-customer')}}" method="POST">
                             {{csrf_field()}}
-                            <input type="text" name="email_account" placeholder="Tài khoản" />
+                            <input type="text" name="email_account"  placeholder="Tài khoản" />
                             <input type="password" name="password_account" placeholder="Password" />
                             <span>
 								<input type="checkbox" class="checkbox">
@@ -22,7 +22,16 @@
                 <div class="col-sm-1">
                     <h2 class="or">Hoặc</h2>
                 </div>
+
                 <div class="col-sm-4">
+                    </header>
+                    <?php
+                    $message = Session::get('message');
+                    if($message){
+                        echo '<span class="text-alert" style="color: red">'.$message.'</span>';
+                        Session::put('message',null);
+                    }
+                    ?>
                     <div class="signup-form"><!--sign up form-->
                         <h2>Đăng ký</h2>
                         <form action="{{URL::to('/add-customer')}}" method="POST">

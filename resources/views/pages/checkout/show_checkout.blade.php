@@ -4,15 +4,15 @@
     <section id="cart_items">
         <div class="container">
             <div class="breadcrumbs">
-                <ol class="breadcrumb">
-                    <li><a href="{{URL::to('/')}}">Trang chủ</a></li>
-                    <li class="active">Thanh toán giỏ hàng</li>
-                </ol>
+{{--                <ol class="breadcrumb">--}}
+{{--                    <li><a href="{{URL::to('/')}}">Trang chủ</a></li>--}}
+{{--                    <li class="active">Thanh toán giỏ hàng</li>--}}
+{{--                </ol>--}}
             </div>
 
-            <div class="register-req">
-                <p>Làm ơn đăng ký hoặc đăng nhập để thanh toán giỏ hàng và xem lại lịch sử mua hàng</p>
-            </div><!--/register-req-->
+{{--            <div class="register-req">--}}
+{{--                <p>Làm ơn đăng ký hoặc đăng nhập để thanh toán giỏ hàng và xem lại lịch sử mua hàng</p>--}}
+{{--            </div><!--/register-req-->--}}
 
             <div class="shopper-informations">
                 <div class="row">
@@ -37,9 +37,7 @@
 
                 </div>
             </div>
-            <div class="review-payment">
-                <a href="{{URL::to('/show-cart')}}"><h2>Xem lại giỏ hàng</h2></a>
-            </div>
+
 
 
             {{-- <div class="payment-options">

@@ -41,25 +41,19 @@ class CheckoutController extends Controller
     }
     public function add_customer(Request $request){
 
-        $validator = Validator::make($request->all(), [
-            'customer_name'=>'bail|required|alpha|min:6|max:10',
-            'customer_phone'=>'bail|required|alpha|min:6|max:10',
-            'customer_email'=>'bail|required|email',
-            'customer_password'=>'bail|required|min:5',
-        ]);
+        $data = array();
+        $data['customer_name'] = $request->customer_name;
+        $data['customer_phone'] = $request->customer_phone;
+        $data['customer_email'] = $request->customer_email;
+        $data['customer_password'] = md5($request->customer_password);
 
-//        $data = array();
-//        $data['customer_name'] = $request->customer_name;
-//        $data['customer_phone'] = $request->customer_phone;
-//        $data['customer_email'] = $request->customer_email;
-//        $data['customer_password'] = md5($request->customer_password);
-
-//        $customer_id = DB::table('tbl_customers')->insertGetId($data);
-        $customer_id = DB::table('tbl_customers')->insertGetId($validator);
+        $customer_id = DB::table('tbl_customers')->insertGetId($data);
+//        $customer_id = DB::table('tbl_customers')->insertGetId($validator);
+        Session::put('message','Đăng ký tài khoản thành công');
 
         Session::put('customer_id',$customer_id);
         Session::put('customer_name',$request->customer_name);
-        return Redirect::to('/checkout');
+        return Redirect::to('/login-checkout');
 
 
     }
