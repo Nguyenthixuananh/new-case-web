@@ -38,11 +38,11 @@
                 </div>
             </div>
             <div class="review-payment">
-                <h2>Xem lại giỏ hàng</h2>
+                <a href="{{URL::to('/show-cart')}}"><h2>Xem lại giỏ hàng</h2></a>
             </div>
 
 
-            <div class="payment-options">
+            {{-- <div class="payment-options">
 					<span>
 						<label><input type="checkbox"> Direct Bank Transfer</label>
 					</span>
@@ -52,7 +52,7 @@
                 <span>
 						<label><input type="checkbox"> Paypal</label>
 					</span>
-            </div>
+            </div> --}}
         </div>
     </section> <!--/#cart_items-->
 

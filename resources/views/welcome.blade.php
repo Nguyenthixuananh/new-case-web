@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon-precomposed"
         href="{{ asset('frontend/images/ico/apple-touch-icon-57-precomposed.png') }}">
 
-        <link rel="shortcut icon" href="https://theme.hstatic.net/1000341902/1000733930/14/favicon.png?v=222" />
+    <link rel="shortcut icon" href="https://theme.hstatic.net/1000341902/1000733930/14/favicon.png?v=222" />
 </head>
 <!--/head-->
 
@@ -83,8 +83,8 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="{{ \Illuminate\Support\Facades\URL::to('/') }}"><img src="{{ asset('frontend/images/home/logo.png') }}"
-                                    alt="" /></a>
+                            <a href="{{ \Illuminate\Support\Facades\URL::to('/') }}"><img
+                                    src="{{ asset('frontend/images/home/logo.png') }}" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-sm-8">
@@ -124,10 +124,20 @@
                             <ul class="nav navbar-nav collapse navbar-collapse">
                                 <li><a href="{{ \Illuminate\Support\Facades\URL::to('/trang-chu') }}"
                                         class="active"><strong>TRANG CHỦ</strong></a></li>
-                                <li class="dropdown"><a href="#"><strong>CHỦ ĐỀ</strong><i
+                                <li class="dropdown"><a href="#"><strong>BỘ SƯU TẬP</strong><i
                                             class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
+                                        @foreach ($category as $key => $cate)
+                                            <li>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"><a
+                                                                href="{{ \Illuminate\Support\Facades\URL::to('/danh-muc-san-pham/' . $cate->category_id) }}">{{ $cate->category_name }}</a>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        @endforeach
 
                                     </ul>
                                 </li>
@@ -225,7 +235,7 @@
                     <div class="left-sidebar">
                         <div class="panel-group category-products" id="accordian">
                             <!--category-productsr-->
-                            <h2>Danh mục sản phẩm</h2>
+                            <h2>BỘ SƯU TẬP</h2>
                             @foreach ($category as $key => $cate)
 
                                 <div class="panel panel-default">
@@ -243,7 +253,7 @@
                         <div class="brands_products">
                             <!--brands_products-->
                             <div class="brands-name">
-                                <h2>Thương hiệu sản phẩm</h2>
+                                <h2>Thương hiệu</h2>
                                 @foreach ($brand as $key => $brand)
                                     <ul class="nav nav-pills nav-stacked">
                                         <li>
