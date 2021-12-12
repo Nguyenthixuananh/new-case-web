@@ -365,16 +365,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </a>
                     </li>
 
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-book"></i>
-                            <span>Slider</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="{{URL::to('/manage-slider')}}">Liệt kê slider</a></li>
-                            <li><a href="{{URL::to('/add-slider')}}">Thêm slider</a></li>
-                        </ul>
-                    </li>
+{{--                    <li class="sub-menu">--}}
+{{--                        <a href="javascript:;">--}}
+{{--                            <i class="fa fa-book"></i>--}}
+{{--                            <span>Slider</span>--}}
+{{--                        </a>--}}
+{{--                        <ul class="sub">--}}
+{{--                            <li><a href="{{URL::to('/manage-slider')}}">Liệt kê slider</a></li>--}}
+{{--                            <li><a href="{{URL::to('/add-slider')}}">Thêm slider</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
 
                     </li>
                     <li class="sub-menu">
@@ -388,28 +388,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                         </ul>
                     </li>
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-book"></i>
-                            <span>Mã giảm giá</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="{{URL::to('/insert-coupon')}}">Quản lý mã giảm giá</a></li>
-                            <li><a href="{{URL::to('/list-coupon')}}">Liệt kê mã giảm giá</a></li>
-                        </ul>
-                    </li>
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-book"></i>
-                            <span>Vận chuyển</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="{{URL::to('/delivery')}}">Quản lý vận chuyển</a></li>
+{{--                    <li class="sub-menu">--}}
+{{--                        <a href="javascript:;">--}}
+{{--                            <i class="fa fa-book"></i>--}}
+{{--                            <span>Mã giảm giá</span>--}}
+{{--                        </a>--}}
+{{--                        <ul class="sub">--}}
+{{--                            <li><a href="{{URL::to('/insert-coupon')}}">Quản lý mã giảm giá</a></li>--}}
+{{--                            <li><a href="{{URL::to('/list-coupon')}}">Liệt kê mã giảm giá</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
+{{--                    <li class="sub-menu">--}}
+{{--                        <a href="javascript:;">--}}
+{{--                            <i class="fa fa-book"></i>--}}
+{{--                            <span>Vận chuyển</span>--}}
+{{--                        </a>--}}
+{{--                        <ul class="sub">--}}
+{{--                            <li><a href="{{URL::to('/delivery')}}">Quản lý vận chuyển</a></li>--}}
 
 
 
-                        </ul>
-                    </li>
+{{--                        </ul>--}}
+{{--                    </li>--}}
                     <li class="sub-menu">
                         <a href="javascript:;">
                             <i class="fa fa-book"></i>
@@ -457,7 +457,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- footer -->
         <div class="footer">
             <div class="wthree-copyright">
-                <p>© 2017 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+                <p> Trang Admin | Design by <a href="http://w3layouts.com">W3layouts</a></p>
             </div>
         </div>
         <!-- / footer -->
