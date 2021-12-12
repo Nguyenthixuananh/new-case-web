@@ -83,7 +83,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="index.html"><img src="{{ asset('frontend/images/home/logo.png') }}"
+                            <a href="{{ \Illuminate\Support\Facades\URL::to('/') }}"><img src="{{ asset('frontend/images/home/logo.png') }}"
                                     alt="" /></a>
                         </div>
                     </div>
