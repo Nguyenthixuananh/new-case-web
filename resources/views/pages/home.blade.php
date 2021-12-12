@@ -30,8 +30,7 @@
 
 
                                 </a>
-                                <button type="button" class="btn btn-default add-to-cart"
-                                    data-id_product="{{ $product->product_id }}" name="add-to-cart">Thêm giỏ hàng</button>
+                                <a href="{{ \Illuminate\Support\Facades\URL::to('/chi-tiet-san-pham/' . $product->product_id) }}"><button type="button" class="btn btn-default add-to-cart">Xem chi tiết</button></a>
                             </form>
                         </div>
                     </div>

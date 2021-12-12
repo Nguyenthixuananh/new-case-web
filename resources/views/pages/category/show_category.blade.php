@@ -1,5 +1,5 @@
 @extends('welcome')
-@section('content');
+@section('content')
 
     <div class="features_items">
         <!--features_items-->

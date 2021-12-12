@@ -182,7 +182,7 @@
                                     <h2>{{number_format($lienquan->product_price).'VND'}}</h2>
                                     <p>{{$lienquan->product_name}}</p>
                                     <button type="button" class="btn btn-default add-to-cart"><i
-                                            class="fa fa-shopping-cart"></i>Thêm giỏ hàng
+                                            class="fa fa-shopping-cart"></i>Xem chi tiết
                                     </button>
                                 </div>
                             </div>
