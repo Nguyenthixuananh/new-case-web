@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon-precomposed"
         href="{{ asset('frontend/images/ico/apple-touch-icon-57-precomposed.png') }}">
 
-        <link rel="shortcut icon" href="https://theme.hstatic.net/1000341902/1000733930/14/favicon.png?v=222" />
+    <link rel="shortcut icon" href="https://theme.hstatic.net/1000341902/1000733930/14/favicon.png?v=222" />
 </head>
 <!--/head-->
 
@@ -83,8 +83,8 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="{{ \Illuminate\Support\Facades\URL::to('/') }}"><img src="{{ asset('frontend/images/home/logo.png') }}"
-                                    alt="" /></a>
+                            <a href="{{ \Illuminate\Support\Facades\URL::to('/') }}"><img
+                                    src="{{ asset('frontend/images/home/logo.png') }}" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-sm-8">
@@ -127,7 +127,17 @@
                                 <li class="dropdown"><a href="#"><strong>CHỦ ĐỀ</strong><i
                                             class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
+                                        @foreach ($category as $key => $cate)
+                                            <li>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title"><a
+                                                                href="{{ \Illuminate\Support\Facades\URL::to('/danh-muc-san-pham/' . $cate->category_id) }}">{{ $cate->category_name }}</a>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        @endforeach
 
                                     </ul>
                                 </li>
