@@ -293,7 +293,7 @@ ul.sub-menu {
 	position: absolute;
 	top: 30px;
 	left: 0;
-	background: rgba(0, 0, 0, 0.6);
+	background: #fff;
 	list-style: none;
 	padding: 0;
 	margin: 0;
