@@ -24,6 +24,8 @@
     <script src="{{asset('backend/js/jquery2.0.3.min.js')}}"></script>
     <script src="{{asset('backend/js/raphael-min.js')}}"></script>
     <script src="{{asset('backend/js/morris.js')}}"></script>
+    <link rel="shortcut icon" href="https://theme.hstatic.net/1000341902/1000733930/14/favicon.png?v=222" />
+
 </head>
 <body>
 <section id="container">

@@ -9,7 +9,7 @@
                 <img src="{{ asset('upload/product/' . $value->product_image) }}" width="100px">
 {{--                <img src="{{\Illuminate\Support\Facades\URL::to('/public/upload/product/'.$value->product_image)}}"--}}
 {{--                     alt=""/>--}}
-                <h3>ZOOM</h3>
+                <h3>Maybi</h3>
             </div>
             <div id="similar-product" class="carousel slide" data-ride="carousel">
 
@@ -66,9 +66,9 @@
     <div class="category-tab shop-details-tab"><!--category-tab-->
         <div class="col-sm-12">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#details" data-toggle="tab">Mô tả</a></li>
-                <li><a href="#companyprofile" data-toggle="tab">Chi tiết sản phẩm</a></li>
-                <li><a href="#reviews" data-toggle="tab">Đánh giá</a></li>
+                <li class="active"><a href="#details" data-toggle="tab">Mô tả sản phẩm</a></li>
+                <li><a href="#companyprofile" data-toggle="tab">Hướng dẫn bảo quản</a></li>
+                {{-- <li><a href="#reviews" data-toggle="tab">Đánh giá</a></li> --}}
             </ul>
         </div>
         <div class="tab-content">
@@ -134,7 +134,7 @@
             {{--            </div>--}}
             {{--        </div>--}}
 
-            <div class="tab-pane fade" id="reviews">
+            {{-- <div class="tab-pane fade" id="reviews">
                 <div class="col-sm-12">
                     <ul>
                         <li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
@@ -159,7 +159,7 @@
                         </button>
                     </form>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </div><!--/category-tab-->
