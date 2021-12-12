@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-toggle {
-  background-color: #000;
+  background-color: #4AC3E0;
 }
 
 a#scrollUp {
@@ -319,11 +319,11 @@ ul.sub-menu {
 }
 
 .navbar-nav li ul.sub-menu li a{
-  color: #fff;
+  color: #000;
 }
 
 .navbar-nav li ul.sub-menu li a:hover{
-    color: #FDB45E;
+    color: #4AC3E0;
 }
 
 .fa-angle-down{

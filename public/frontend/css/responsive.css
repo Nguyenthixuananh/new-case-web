@@ -163,7 +163,7 @@
 }
 
 .mainmenu ul li{
-	background: rgba(0, 0, 0, 0.5);
+	background: #fff;
     padding-top: 15px;
 	padding-bottom: 0;
 }
@@ -173,7 +173,7 @@
 }
 
 .mainmenu ul li  a{
-	color: #fff;
+	color: #000;
 }
 
 .navbar-collapse.in{
