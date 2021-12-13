@@ -15,6 +15,13 @@
 
                 ?>
                 <table class="table table-condensed">
+                    <?php
+                    $message = Session::get('message');
+                    if($message){
+                        echo '<span class="text-alert" style="color: red">'.$message.'</span>';
+                        Session::put('message',null);
+                    }
+                    ?>
                     <thead>
                     <tr class="cart_menu">
                         <td class="image">Hình ảnh</td>
