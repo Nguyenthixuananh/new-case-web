@@ -51,13 +51,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="top-nav clearfix">
             <!--search & user info start-->
             <ul class="nav pull-right top-menu">
-                <li>
+                {{-- <li>
                     <input type="text" class="form-control search" placeholder=" Search">
-                </li>
+                </li> --}}
                 <!-- user login dropdown start-->
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <img alt="" src="{{('backend/images/2.png')}}">
+                        <img alt="" src="{{('backend/images/2.jpg')}}">
                         <span class="username">
                 	<?php
                             $name = Session::get('admin_name');
