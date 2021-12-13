@@ -20,7 +20,7 @@
                             @csrf
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Tên thương hiệu</label>
-                                <input type="text" name="brand_product_name" class="form-control" id="exampleInputEmail1" placeholder="Tên danh mục">
+                                <input type="text" data-validation="length" data-validation-length="min8" data-validation-error-msg="Làm ơn điền ít nhất 8 ký tự" name="brand_product_name" class="form-control" id="exampleInputEmail1" placeholder="Tên danh mục">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Mô tả thương hiệu</label>
