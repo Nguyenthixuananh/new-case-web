@@ -73,4 +73,10 @@
             </section>
 
         </div>
+{{--        <script>--}}
+{{--            $(".add").click(function (e) {--}}
+{{--                e.preventDefault();--}}
+{{--                Toastr::success('Messages in here', 'Title', ["positionClass" => "toast-top-center"])--}}
+{{--            })--}}
+{{--        </script>--}}
 @endsection

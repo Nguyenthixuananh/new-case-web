@@ -31,6 +31,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <link rel="shortcut icon" href="https://theme.hstatic.net/1000341902/1000733930/14/favicon.png?v=222" />
 
+{{--    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">--}}
+
+
 
 </head>
 <body>
@@ -203,6 +206,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="{{asset('backend/ckeditor/ckeditor.js')}}"></script>
 <script src="{{asset('backend/js/jquery.form-validator.min.js')}}"></script>
 <script src="{{asset('backend/js/jquery.dataTables.min.js')}}"></script>
+
+{{--<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>--}}
+{{--<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>--}}
+
+
 <script type="text/javascript">
     $('.update_quantity_order').click(function(){
         var order_product_id = $(this).data('product_id');
@@ -472,5 +480,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
 </script>
 <!-- //calendar -->
+
+{{--{!! Toastr::message() !!}--}}
+
 </body>
 </html>

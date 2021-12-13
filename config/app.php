@@ -164,6 +164,8 @@ return [
 
         Laravel\Socialite\SocialiteServiceProvider::class,
 
+        Brian2694\Toastr\ToastrServiceProvider::class,
+
 
 
 
@@ -237,8 +239,10 @@ return [
 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
-
+        'Toastr'  => Brian2694\Toastr\Facades\Toastr::class,
 
     ],
+
+
 
 ];

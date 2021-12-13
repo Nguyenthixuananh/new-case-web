@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -37,14 +38,17 @@ class CategoryProduct extends Controller
 
     }
 
-    public function save_category_product(Request $request)
+    public function save_category_product(CategoryRequest $request)
     {
         $this->authLogin();
 //        $data = array();
 //        $data['category_name'] = $request->category_product_name;
 //        $data['category_desc'] = $request->category_product_desc;
 //        $data['category_status'] = $request->category_product_status;
-
+//        $request->validate([
+//            'category_name' => 'required',
+//            'category_desc' => 'required',
+//        ]);
         $data= $request->all();
         $category= new Category();
         $category->category_name= $data['category_product_name'];

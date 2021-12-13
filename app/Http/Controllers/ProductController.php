@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
@@ -13,26 +14,32 @@ class ProductController extends Controller
     public function authLogin()
     {
         $admin_id = Session::get('admin_id');
-        if ($admin_id){
+        if ($admin_id) {
             return Redirect::to('admin.dashboard');
         } else {
             return Redirect::to('admin')->send();
         }
     }
+
     public function add_product()
     {
         $this->authLogin();
         $cate_product = DB::table('tbl_category_product')->orderBy('category_id', 'desc')->get();
         $brand_product = DB::table('tbl_brand_product')->orderBy('brand_id', 'desc')->get();
-        return view('admin.product.add_product')->with('cate_product', $cate_product)->with('brand_product', $brand_product);
+
+
+        return view('admin.product.add_product')
+            ->with('cate_product', $cate_product)
+            ->with('brand_product', $brand_product)
+            ;
     }
 
     public function all_product()
     {
         $this->authLogin();
         $all_product = DB::table('tbl_product')
-            ->join('tbl_category_product','tbl_category_product.category_id', '=', 'tbl_product.category_id')
-            ->join('tbl_brand_product','tbl_brand_product.brand_id', '=', 'tbl_product.brand_id')
+            ->join('tbl_category_product', 'tbl_category_product.category_id', '=', 'tbl_product.category_id')
+            ->join('tbl_brand_product', 'tbl_brand_product.brand_id', '=', 'tbl_product.brand_id')
             ->orderBy('tbl_product.product_id', 'desc')->get();
         $manager_products = view('admin.product.all_product')->with('all_product', $all_product);
         return view('admin_layout')->with('admin.product.all_product', $manager_products);
@@ -154,31 +161,31 @@ class ProductController extends Controller
 
     public function detail_product($product_id)
     {
-        $cate_product = DB::table('tbl_category_product')->where('category_status','=','0')->orderBy('category_id', 'desc')->get();
-        $brand_product = DB::table('tbl_brand_product')->where('brand_status','=','0')->orderBy('brand_id', 'desc')->get();
+        $cate_product = DB::table('tbl_category_product')->where('category_status', '=', '0')->orderBy('category_id', 'desc')->get();
+        $brand_product = DB::table('tbl_brand_product')->where('brand_status', '=', '0')->orderBy('brand_id', 'desc')->get();
 
         $detail_product = DB::table('tbl_product')
-            ->join('tbl_category_product','tbl_category_product.category_id', '=', 'tbl_product.category_id')
-            ->join('tbl_brand_product','tbl_brand_product.brand_id', '=', 'tbl_product.brand_id')
-            ->where('tbl_product.product_id','=',$product_id)->get();
+            ->join('tbl_category_product', 'tbl_category_product.category_id', '=', 'tbl_product.category_id')
+            ->join('tbl_brand_product', 'tbl_brand_product.brand_id', '=', 'tbl_product.brand_id')
+            ->where('tbl_product.product_id', '=', $product_id)->get();
 
-        foreach ($detail_product as $key=>$value) {
+        foreach ($detail_product as $key => $value) {
             $category_id = $value->category_id;
 
         }
-    
+
         $related_product = DB::table('tbl_product')
-            ->join('tbl_category_product','tbl_category_product.category_id', '=', 'tbl_product.category_id')
-            ->join('tbl_brand_product','tbl_brand_product.brand_id', '=', 'tbl_product.brand_id')
-            ->where('tbl_category_product.category_id','=',$category_id)
-            ->whereNotIn('tbl_product.product_id',[$product_id])
+            ->join('tbl_category_product', 'tbl_category_product.category_id', '=', 'tbl_product.category_id')
+            ->join('tbl_brand_product', 'tbl_brand_product.brand_id', '=', 'tbl_product.brand_id')
+            ->where('tbl_category_product.category_id', '=', $category_id)
+            ->whereNotIn('tbl_product.product_id', [$product_id])
             ->get();
 
 
         return view('pages.product.show_detail')
-            ->with('category',$cate_product)
-            ->with('brand',$brand_product)
-            ->with('product_detail',$detail_product)
-            ->with('relate',$related_product);
+            ->with('category', $cate_product)
+            ->with('brand', $brand_product)
+            ->with('product_detail', $detail_product)
+            ->with('relate', $related_product);
     }
 }

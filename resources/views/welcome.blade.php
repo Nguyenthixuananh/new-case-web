@@ -30,6 +30,9 @@
         href="{{ asset('frontend/images/ico/apple-touch-icon-57-precomposed.png') }}">
 
     <link rel="shortcut icon" href="https://theme.hstatic.net/1000341902/1000733930/14/favicon.png?v=222" />
+
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+
 </head>
 <!--/head-->
 
@@ -380,6 +383,10 @@
     <script src="{{ asset('frontend/js/main.js') }}"></script>
     {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
     <script src="{{ asset('frontend/js/sweetalert.min.js') }}"></script>
+
+    <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function() {
             $('.add-to-cart').click(function() {

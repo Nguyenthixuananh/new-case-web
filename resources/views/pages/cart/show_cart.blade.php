@@ -65,7 +65,7 @@
                                 </p>
                             </td>
                             <td class="cart_delete">
-                                <a class="cart_quantity_delete" href="{{\Illuminate\Support\Facades\URL::to('/delete-to-cart/'.$v_content->rowId)}}"><i class="fa fa-times"></i></a>
+                                <a class="cart_quantity_delete" onclick="confirm('Bạn có chắc muốn xóa không?????')" href="{{\Illuminate\Support\Facades\URL::to('/delete-to-cart/'.$v_content->rowId)}}"><i class="fa fa-times"></i></a>
                             </td>
                         </tr>
                     @endforeach
